@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { ValidationResult } from '../types';
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.VITE_API_KEY;
 
 if (!API_KEY) {
   throw new Error("API_KEY environment variable not set");
