@@ -1,19 +1,42 @@
-
 export interface ValidationResult {
+  executiveSummary: string;
   validationScore: number;
-  opportunities: string[];
-  risks: string[];
-  audienceProfile: {
-    demographics: string;
-    painPoints: string[];
+  marketAnalysis: {
+    marketSize: string;
+    trends: string[];
+    targetAudience: {
+      demographics: string;
+      psychographics: string;
+      painPoints: string[];
+      userPersonas: {
+        name: string;
+        description: string;
+      }[];
+    };
   };
-}
-
-// Vite provides import.meta.env; declare the shape we use to satisfy TypeScript
-interface ImportMetaEnv {
-  readonly VITE_GEMINI_API_KEY?: string;
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
+  competitiveLandscape: {
+    directCompetitors: {
+      name: string;
+      description: string;
+    }[];
+    indirectCompetitors: {
+      name: string;
+      description: string;
+    }[];
+    differentiators: string[];
+  };
+  swotAnalysis: {
+    strengths: string[];
+    weaknesses: string[];
+    opportunities: string[];
+    threats: string[];
+  };
+  monetizationStrategies: {
+    primaryModels: string[];
+    secondaryModels: string[];
+  };
+  actionableNextSteps: {
+    validationSteps: string[];
+    mvpFeatures: string[];
+  };
 }

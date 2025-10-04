@@ -67,7 +67,7 @@ const App: React.FC = () => {
         </main>
 
         <footer className="text-center mt-12 text-slate-500 text-sm">
-          <p>Didukung oleh Google Gemini</p>
+          <p>Dibuat 24 Learning Centre</p>
         </footer>
       </div>
     </div>
