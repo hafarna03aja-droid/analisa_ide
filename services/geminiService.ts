@@ -2,7 +2,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { ValidationResult } from '../types';
 
-const API_KEY = process.env.VITE_GEMINI_API_KEY;
+// Use Vite's recommended way to access env variables on the client: import.meta.env
+// This is more reliable during Vite build / on platforms like Vercel than process.env
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 if (!API_KEY) {
   throw new Error("VITE_GEMINI_API_KEY environment variable not set");
